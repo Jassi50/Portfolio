@@ -1,0 +1,185 @@
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+
+	.gallery-columns-#{$i} {
+		grid-template-columns: repeat($i, 1fr);
+	}
+}
+
+.gallery-caption {
+	display: block;
+}
+//Slider
+body {
+	font-family: Arial;
+	margin: 0;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+  
+  img {
+	vertical-align: middle;
+  }
+  
+  .container {
+	position: relative;
+	padding: 80px;
+	width: 600px;
+		// text-align: center;
+		margin: 0 auto;
+		padding: 0 80px 0 80px;
+	// max-width: 1000px;
+	// margin: 0 auto;
+  }
+  
+  /* .holder {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+  } */
+  
+  .holder::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide the images by default */
+  .slides {
+	display: none;
+	/* max-width: 1000px; */
+	/* width: 100%;
+	flex-shrink: 0;
+	height: 100%; */
+  }
+  
+  .slides img {
+	width: 100%;
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+
+//   .container {
+// 	  width: 90%;
+// 	  margin: 0 auto;
+// 	  padding: 0;
+//   }
+  .prevContainer,
+  .nextContainer {
+	background-color: $color-button-background;;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, calc(-50% - 54px));
+	height: 54px;
+	width: 54px;
+	cursor: pointer;
+	display: none;
+	visibility: none;
+  }
+  
+//   .prevContainer {
+// 	margin-left: 26px;
+// 	left: 0;
+// 	border-radius: 30px 0 0 30px;
+//   }
+  
+//   .prev {
+// 	position: relative;
+// 	top: 50%;
+// 	transform: translate(0, -50%);
+// 	height: 34px;
+// 	width: 32px;
+// 	float: left;
+// 	margin-left: 12px
+//   }
+  
+//   .prev svg,
+//   .next svg {
+// 	fill: white;
+//   }
+  
+//   .nextContainer {
+// 	margin-right: 26px;
+// 	right: 0;
+// 	border-radius: 0 30px 30px 0;
+//   }
+  
+//   .next {
+// 	position: relative;
+// 	top: 50%;
+// 	transform: translate(0, -50%);
+// 	height: 34px;
+// 	width: 32px;
+// 	float: right;
+// 	margin-right: 12px;
+//   }
+  
+  /* Container for image text */
+//   .caption-container {
+// 	text-align: left;
+// 	background-color: #222;
+// 	padding: 2px 16px;
+// 	color: white;
+// 	// display: none;
+//   }
+  .column-1, .column-6 {
+	  display: none;
+	  visibility: none;
+  }
+
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  .row {
+	  display: flex;
+	  justify-content: center;
+	align-items: center;
+	justify-items: center;
+  }
+  /* Six columns side by side */
+  .column {
+	// float: middle;
+	display: flex;
+	flex-direction: row;
+	width: 16.66%;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+  }
+  
+  /* Add a transparency effect for thumbnail images */
+  .slide-thumbnail {
+	width: 100%;
+	opacity: 0.6;
+	cursor: pointer;
+  }
+  
+  .active,
+  .slide-thumbnail:hover {
+	opacity: 1;
+  }
+  
+
+  @media only screen and (max-width: 599px) {
+	.container {
+		width: 300px;
+		margin: 0 auto;
+		padding: 0;
+	}
+  }
+
+ 

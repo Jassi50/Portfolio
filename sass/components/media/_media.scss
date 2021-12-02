@@ -1,0 +1,92 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+.columns-3 ul {
+	max-width: 15rem;
+}
+.blocks-gallery-grid {
+	margin: 0 auto;
+}
+//Contact Page
+
+.icon-contact {
+	width: 4rem;
+}
+.icon-contact:hover {
+	background-color: $color-hover;
+}
+
+
+
+//About Page
+.columns-4 {
+	width: 20rem;
+}
+
+//Home page
+.home-icon {
+	width: 10rem;
+	height: 10rem;
+	margin: 0 auto;
+}
+
+.wp-block-image img{
+width: 30rem;
+height: auto;
+}
+
+@media screen and (min-width: 600px) {
+	//About Page
+	.columns-3 ul{
+		width: 15rem;
+	}
+	.about-gallery ul{
+		max-width: 35rem;
+	}
+}
+@media screen and (max-width: 599px) {
+	// .contact-gallery .blocks-gallery-grid .blocks-gallery-item {
+	// 	margin: 0 5px;
+	// 	// flex-wrap: nowrap;
+	// }
+	// .contact-gallery .blocks-gallery-grid {
+	// 	flex-wrap: nowrap;
+	// }
+	// .contact-gallery ul{
+	// 	margin: 0 auto;
+	// 	padding: 0;
+	// 	width: 0;
+	// }
+	//About Page
+	.columns-3 ul{
+		width: 10rem;
+	}
+	.about-gallery ul{
+		max-width: 10rem;
+	}
+	.about-gallery .blocks-gallery-grid .wp-image-153{
+		max-width: 50%;
+	}
+	.about-gallery .blocks-gallery-grid .wp-image-145 {
+		max-width: 50%;
+	}
+	
+}
+//Single Page
+// .content-plan img, .site-plan img, .wireframes img, .prototype img{
+// 	max-width: 60rem;
+// 	height: 80rem;
+// 	justify-content: center;
+
+// }
